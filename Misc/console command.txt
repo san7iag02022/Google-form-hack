@@ -1,0 +1,8 @@
+function loop(e) {
+    if (e.children)
+        for (let i = 0; i < e.children.length; i++) {
+            let c = e.children[i], n = c.getAttribute('name');
+            if (n) console.log(`${c.getAttribute('aria-label')}: ${n}`);
+            loop(e.children[i]);
+        }
+}; loop(document.body);

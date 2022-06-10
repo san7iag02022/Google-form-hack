@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+</head>
+
+<body>
+    <h1>heading1</h1>
+    <button onclick="list()">button</button>
+    <script>
+    function list()
+    {
+        google.script.run
+        .withSuccessHandler(function(response ){
+            console.log(response);
+        })
+        .withFailureHandler(function(err){
+            console.log(err);
+        })
+        .list();
+    }
+    </script>
+</body>
+
+</html>
